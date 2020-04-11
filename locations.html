@@ -11,31 +11,33 @@
 <h1 class="hidden">Coors - Locations</h1>
 	<section id="header">
 		<h2 class="hidden">Header</h2>
-		<div id="smallerHeader">
 			<nav id="mainNav">
 				<h3 class="hidden">Main Navigation</h3>
-				<a class="a1" href="about.html">About Us</a>
-				<a class="a2" href="products.html">Products</a>
-				<span id="logo"><a href="index.html"><img src="images/logo.png" alt="coors logo"></a></span>
-				<a class="a3" href="locations.html">Locations</a>
-				<a class="a4" href="contact.html">Contact</a>
+				<a href="about.html">About</a>
+				<a href="products.html">Products</a>
+				<span href="index.html" id="logo"><img src="images/logo.png" alt="coors logo"></span>
+				<a href="locations.html">Locations</a>
+				<a href="contact.html">Contact</a>
 			</nav>
-		</div>
 	</section>
 	<main>
 		<section id="content">
 		<div id="container">
 			<h2 class="hidden">Main Content</h2>
 			<div id="locations">
-				<div id="map"><img src="images/map.png" alt="map"></div>
+				<div id="map"></div>
 				<h3 class="hidden">Map and Info</h3>
-				<div id="info">
-					<h4>Locations</h4>
-					<p>800 Brewery Rd <br> London ON</p>
-					<p>45 Scotch Blvd <br> Mississauga ON</p>
-					<p>1004 Rainbow St <br> Vancouver BC</p>
-					<h4>Hours</h4>
-					<p>9Am-5PM M-F <br> 12PM-5PM S<br> Closed Sunday</p>
+				<div id="infoContainer">
+					<div class="info">
+						<h4>Locations</h4>
+						<p>800 Brewery Rd <br> London ON</p>
+						<p>45 Scotch Blvd <br> Mississauga ON</p>
+						<p>1004 Rainbow St <br> Vancouver BC</p>
+					</div>
+					<div class="info">
+						<h4>Hours</h4>
+						<p>9Am-5PM M-F <br> 12PM-5PM S<br> Closed Sunday</p>
+					</div>
 				</div>
 				<div id="storeLocator">
 					<h3>Find the Seller Closest to You</h3>
@@ -43,7 +45,7 @@
 					<form id="locatorForm" autocomplete="off" action="action_page.php" method="post">
                     <input type="text" placeholder="Postal Code" required>
                     <br><br>
-                    <p style="color:white;font-weight:600;text-align:center;width:50%">Distance (0-50km)</p>
+					<p style="color:white;font-weight:300;text-align:center;width: 50%;">Distance (0-50km)</p>
                     <input type="submit" value="Submit">
                     <input type="range">
                     <br><br>
