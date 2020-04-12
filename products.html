@@ -9,15 +9,25 @@
 </head>
 <body>
 	<h1 class="hidden">Coors - Products</h1>
+	<!-- VIDEO  --> 
+<section class="lightbox notPlaying" style="display:none;">
+  <video class="video-player" src="video/coors_ad.mp4"></video>
+  <span>click anywhere to play the video...</span>
+  	<div class="controls">
+ 	<button class="lightbox-close">Close</button>
+  	<button class="rWind">Restart</button>
+	</div>
+</section>
+<!-- END VIDEO --> 
 	<section id="header">
 		<h2 class="hidden">Header</h2>
 			<nav id="mainNav">
 				<h3 class="hidden">Main Navigation</h3>
-				<a href="about.html">About</a>
-				<a href="products.html">Products</a>
-				<span href="index.html" id="logo"><img src="images/logo.png" alt="coors logo"></span>
-				<a href="locations.html">Locations</a>
-				<a href="contact.html">Contact</a>
+				<a class="navLink" href="about.html">About</a>
+				<a class="navLink"href="products.html">Products</a>
+				<a href="index.html" id="logo"><img src="images/logo.png" alt="coors logo"></span>
+				<a class="navLink"href="locations.html">Locations</a>
+				<a class="navLink"href="contact.html">Contact</a>
 			</nav>
 	</section>
 	<main>
@@ -26,18 +36,33 @@
 			<h2 class="hidden">Main Content</h2>
 			<section id="productsContainer">
 				<h2 class="hidden">Our Products</h2>
-					<div id="productsImage">
+					<div>
+						<!-- cool rainbow bar thingies -->
+						<img id="productsImage" src="images/reg_product.jpg">
+						<div class="bars">
+						<div class="bar reg" style="background-color:#ed5292">
+						<span style="font-weight: 800;">Coors Regular</span>
+						<p>	The Molson standard brew, a cool and crisp lager that has been around for years.</p>
+						</div>
+						<div class="bar"style="background-color:#e56139"></div>
+						<div class="bar na" style="background-color:#d0e47f">
+							<span style="font-weight: 800;">Coors Non-Alcoholic</span>
+							<p>	We offer a non-alcoholic brew, which tastes exactly like our Regular beer but with none of the alcohol content!</p>
+						</div>
+						<div class="bar light"style="background-color:#81cae8"><span style=" font-weight: 800;">Coors Light</span>
+							<p>Coors Light is  lighter-than-light, refreshing and easy to drink on a hot summer's day in the mountains.</p></div>
+						<div class="bar"style="background-color:#1276c0"></div>
+						</div>
 					</div>
 		
 					<div id="productsDesc">
-
-						<div class="product">
+						<div class="product reg">
 							<img src="images/reg_transparent.png" alt="Coors Regular">
 						</div>
-						<div class="product">
+						<div class="product light">
 							<img src="images/light_transparent.png" alt="Coors Light">
 						</div>
-						<div class="product">
+						<div class="product na">
 							<img src="images/na_transparent.png" alt="Coors Non-Alcoholic">
 						</div>
 					<!--<h3>Coors Light</h3>

@@ -66,6 +66,9 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+html {
+	scroll-behavior: smooth;
+}
 .hidden {
 	display: none;
 }
@@ -77,9 +80,13 @@ body {
 }
 
 header {
+	padding-top: 20px;
 	width: 100vw;
 }
 
+.lightbox { 
+	display: none; 
+}
 #mainNav {
 	text-align: center;
 	width: 100%;
@@ -119,6 +126,7 @@ header {
 	max-height: 60%;
 	max-width: 100%;
 }
+
 
 #content {
 	max-width: 100%;
@@ -394,10 +402,7 @@ footer a:hover {
 
 #productsImage {
 	width: 100%;
-	height: 350px;
-	background-image:url('../images/reg_product.jpg');
-	background-position:center;
-	background-size:cover;
+	height: auto;
 }
 
 #productsDesc {
@@ -671,23 +676,95 @@ footer a:hover {
 }
 
 
-
 /* LAYOUT FOR BIGGER SCREENS */
 
 @media screen and (min-width: 641px) {
 
-#mainLanding {
-	height: 100vh;
-	width: 100vw;
-	background-color: grey;
+.lightbox {
+	display: block;
+	height: auto;
+	background-color: lightblue;
+	text-align: center;
+
 }
 
-#mainVideo {
-	height: 100%;
-	width: 100%;
-	background-color: lightblue;
+.lightbox span {
+	z-index: 1;
+	position: absolute;
+	width: 50%;
+	top: 25%;
+	right: 25%;
+	left: 25%;
+	font-size: 60px;
+	color: white;
+	font-weight: 400px;
+}
+
+.lightbox-close {
+	padding: 10px;
+	width: 100px;
+	border: none;
+	background-color: black;
+	cursor: pointer;
+	color: white;
+	font-family: "Raleway", sans, Arial;
+	font-weight: 500;
+	font-size: 20px;
+}
+
+.lightbox-close:hover {
+	opacity: 0.6;
+	-moz-transition  : all 0.2s ease-in-out;
+	-webkit-transition  : all 0.2s ease-in-out;
+    -o-transition       : all 0.2s ease-in-out;
+    -ms-transition       : all 0.2s ease-in-out;
+	transition    : all 0.2s ease-in-out;
+}
+
+.video-player {
+	opacity: 0.4;
+	position: relative;
 	display: block;
-	text-align: center;
+	height: auto;
+	width: 100vw;
+	z-index: 0;
+}
+
+.rWind {
+	padding: 10px;
+	width: 100px;
+	border: none;
+	background-color: black;
+	cursor: pointer;
+	color: white;
+	font-family: "Raleway", sans, Arial;
+	font-weight: 500;
+	font-size: 20px;
+			-moz-transition  : all 0.2s ease-in-out;
+	-webkit-transition  : all 0.2s ease-in-out;
+    -o-transition       : all 0.2s ease-in-out;
+    -ms-transition       : all 0.2s ease-in-out;
+	transition    : all 0.2s ease-in-out;
+}
+
+.rWind:hover {
+	opacity: 0.6;
+}
+.playing {
+	opacity: 1;
+}
+
+.controls {
+	position: absolute;
+	width: 50%;
+	bottom: 10%;
+	left: 25%;
+	right: 25%;
+	z-index: 1;
+	display: none;
+}
+.controlsShowing {
+	display: inline-block;
 }
 
 #mainNav a {
@@ -696,7 +773,7 @@ footer a:hover {
 	align-items: center;
 	height: 100%;
 }
-#mainNav a:hover {
+.navLink:hover {
 	-moz-transition  : all 0.2s ease-in-out;
 	-webkit-transition  : all 0.2s ease-in-out;
     -o-transition       : all 0.2s ease-in-out;
@@ -887,7 +964,7 @@ footer ul {
 
 #productsImage {
 	width: 100%;
-	height: 760px;
+	height: auto;
 }	
 
 #productsDesc {
@@ -911,8 +988,94 @@ footer ul {
 .product img:hover {
 	opacity: 0.6;
 	cursor: pointer;
+	-moz-transition  : all 0.2s ease-in-out;
+	-webkit-transition  : all 0.2s ease-in-out;
+    -o-transition       : all 0.2s ease-in-out;
+    -ms-transition       : all 0.2s ease-in-out;
+	transition    : all 0.2s ease-in-out;
 }
 
+.bars {
+	z-index: 1;
+	position: absolute;
+	top:calc(20vw + 15%);
+}
+
+.bar { 
+	display: inline-block;
+	width:calc(73vw + 2em);
+	height: 1vw;
+	background: pink;
+	margin-bottom: 1vw;
+ }
+
+ .bar p, span { 
+	opacity: 0;
+	display: none;
+ }
+
+
+
+.desc {
+	display: inline-block;
+	width:calc(73vw + 2em);
+	height: auto;
+	background: pink;
+	margin-bottom: 1vw;
+	animation: dropDesc 0.4s ease-in both;
+}
+
+.desc span {
+	display: block;
+	opacity: 1;
+	text-align: center;
+	font-size: 3vw;
+	padding-top: 3%;
+	padding-bottom: 2%;
+	animation: textFadeIn 1s 0.4s ease-in both;
+}
+
+.desc p {
+	display: block;
+	line-height: 1.2;
+	width: 30%;
+	text-align: center;
+	vertical-align: center;
+	height: 100%;
+	margin: auto;
+	color: black;
+	opacity: 1;
+	font-size: 1.5vw;
+	padding-bottom: 3%;
+	animation: textFadeIn 1s 0.4s ease-in both;
+}
+
+@keyframes dropDesc {
+	from {
+		height: 1vw;
+	}
+	to {
+		height: 15vw;
+	}
+
+.descText {
+	color: white;
+	font-size: 70px;
+	padding: 20px;
+	width: 60%;
+	text-align: center;
+}
+
+
+@keyframes textFadeIn {
+	from { 
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+}
 /* LOCATIONS PAGE (FOR LARGE SCREENS) */
 
 #map  {
