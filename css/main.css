@@ -437,21 +437,27 @@ footer a:hover {
 	padding-bottom: 10px;
 }
 
-#productsDesc p {
-	color: #5f5e5e;
-	text-align: center;
-	font-size: 18px;
-	font-weight: 400;
-	padding-top: 20px;
-	line-height: 1.2;
-}
-
 #productsDivider {
 	width: 340px;
 	margin: auto;
 	margin-top: 30px;
 	margin-bottom: 25px;
 	border-bottom: 5px solid #ed5292;
+}
+
+.bars p {
+	font-size: 14px;
+	padding: 20px;
+	text-align: center;
+}
+
+.bars span {
+	display: none;
+	padding-top: 5%;
+	padding-bottom: 2%;
+	font-size: 18px;
+	text-align: center;
+	width: 100%;
 }
 
 /* LOCATIONS PAGE */
@@ -689,7 +695,7 @@ footer a:hover {
 }
 
 .lightbox span {
-	z-index: 1;
+	display: block;
 	position: absolute;
 	width: 50%;
 	top: 25%;
@@ -1014,8 +1020,6 @@ footer ul {
 	display: none;
  }
 
-
-
 .desc {
 	height: auto;
 	background: pink;
@@ -1024,7 +1028,7 @@ footer ul {
 }
 
 .desc span {
-	display: block;
+	display: none;
 	opacity: 1;
 	text-align: center;
 	font-size: 2vw;
