@@ -9,15 +9,25 @@
 </head>
 <body>
 <h1 class="hidden">Coors - Locations</h1>
+	<!-- VIDEO  --> 
+<section class="lightbox notPlaying" style="display:none;">
+  <video class="video-player" src="video/coors_ad.mp4"></video>
+  <span>click anywhere to play the video...</span>
+  	<div class="controls">
+ 	<button class="lightbox-close">Close</button>
+  	<button class="rWind">Restart</button>
+	</div>
+</section>
+<!-- END VIDEO --> 
 	<section id="header">
 		<h2 class="hidden">Header</h2>
 			<nav id="mainNav">
 				<h3 class="hidden">Main Navigation</h3>
-				<a href="about.html">About</a>
-				<a href="products.html">Products</a>
-				<span href="index.html" id="logo"><img src="images/logo.png" alt="coors logo"></span>
-				<a href="locations.html">Locations</a>
-				<a href="contact.html">Contact</a>
+				<a class="navLink" href="about.html">About</a>
+				<a class="navLink"href="products.html">Products</a>
+				<a href="index.html" id="logo"><img src="images/logo.png" alt="coors logo"></span>
+				<a class="navLink"href="locations.html">Locations</a>
+				<a class="navLink"href="contact.html">Contact</a>
 			</nav>
 	</section>
 	<main>
@@ -25,7 +35,9 @@
 		<div id="container">
 			<h2 class="hidden">Main Content</h2>
 			<div id="locations">
-				<div id="map"></div>
+				<div id="map">
+					<div id="googleMap" style="width:100%;height:100%;"></div>
+				</div>
 				<h3 class="hidden">Map and Info</h3>
 				<div id="infoContainer">
 					<div class="info">
@@ -107,6 +119,17 @@
 			<p class="copyright">2020 Copyright Info <br> Powered by Billson Co.</p>
 		</section>
 	</footer>
+	<script>
+		function myMap() {
+			var mapProp= {
+  			center:new google.maps.LatLng(51.508742,-0.120850),
+  			zoom:5,
+			};
+			var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+		}
+	</script>
+
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC31c2TsJWlvxMvqZuDOaxBo3C4ztmPdc8&callback=myMap"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>
