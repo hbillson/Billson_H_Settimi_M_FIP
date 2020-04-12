@@ -963,7 +963,7 @@ footer ul {
 /* PRODUCTS PAGE (LARGER SCREENS) */
 
 #productsImage {
-	width: 100%;
+	width: 100vw;
 	height: auto;
 }	
 
@@ -998,15 +998,15 @@ footer ul {
 .bars {
 	z-index: 1;
 	position: absolute;
-	top:calc(20vw + 15%);
+	top:calc(12vw + 9%);
 }
 
 .bar { 
 	display: inline-block;
-	width:calc(73vw + 2em);
-	height: 1vw;
+	width:calc(75vw + 2.1em);
+	height: 0.3vw;
 	background: pink;
-	margin-bottom: 1vw;
+	margin-bottom: 0.2vw;
  }
 
  .bar p, span { 
@@ -1017,8 +1017,6 @@ footer ul {
 
 
 .desc {
-	display: inline-block;
-	width:calc(73vw + 2em);
 	height: auto;
 	background: pink;
 	margin-bottom: 1vw;
@@ -1029,8 +1027,8 @@ footer ul {
 	display: block;
 	opacity: 1;
 	text-align: center;
-	font-size: 3vw;
-	padding-top: 3%;
+	font-size: 2vw;
+	padding-top: 5%;
 	padding-bottom: 2%;
 	animation: textFadeIn 1s 0.4s ease-in both;
 }
@@ -1045,7 +1043,7 @@ footer ul {
 	margin: auto;
 	color: black;
 	opacity: 1;
-	font-size: 1.5vw;
+	font-size: 1vw;
 	padding-bottom: 3%;
 	animation: textFadeIn 1s 0.4s ease-in both;
 }
