@@ -1034,7 +1034,6 @@ footer ul {
 	font-size: 2vw;
 	padding-top: 5%;
 	padding-bottom: 2%;
-	animation: textFadeIn 1s 0.4s ease-in both;
 }
 
 .desc p {
@@ -1049,7 +1048,6 @@ footer ul {
 	opacity: 1;
 	font-size: 1vw;
 	padding-bottom: 3%;
-	animation: textFadeIn 1s 0.4s ease-in both;
 }
 
 @keyframes dropDesc {
@@ -1068,15 +1066,6 @@ footer ul {
 	text-align: center;
 }
 
-
-@keyframes textFadeIn {
-	from { 
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
-}
 }
 /* LOCATIONS PAGE (FOR LARGE SCREENS) */
 
