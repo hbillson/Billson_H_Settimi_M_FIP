@@ -1028,7 +1028,7 @@ footer ul {
 }
 
 .desc span {
-	display: none;
+	display: block;
 	opacity: 1;
 	text-align: center;
 	font-size: 2vw;
